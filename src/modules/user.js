@@ -5,7 +5,7 @@ const LOGOUT = 'user/LOGOUT';
 
 // 액션 생성 함수
 export const user_login = (payload) => ({ type: LOGIN, data: payload });
-export const user_logout = (payload) => ({ type: LOGOUT });
+export const user_logout = () => ({ type: LOGOUT });
 
 // 초기값 설정
 const loginInit = { login: false, user: {} };

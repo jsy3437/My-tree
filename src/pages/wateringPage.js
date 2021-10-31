@@ -7,13 +7,38 @@ import user from '../images/user.svg';
 import trace from '../images/trace.svg';
 
 import { feel } from '../data/feel';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
+import { watering } from '../controller/watering';
 
 function IntroPage1() {
 	const [cur, setCur] = useState(0);
 	const [select, setSelect] = useState({});
+	const dispatch = useDispatch();
+	const history = useHistory();
+
+	const onSubmitLoginHandler = () => {
+		const userData = {
+			mood: select.name,
+			treeId: 1,
+		};
+
+		watering(userData)
+			.then((res) => {
+				console.log(res.data);
+				// if (res.data.success) {
+				// setTimeout(() => {
+				// 	history.push({ pathname: '/intro/2', state: { select: select } });
+				// }, 1000);
+				// } else {
+				// 	alert('회원정보가 존재하지 않습니다.');
+				// }
+			})
+			.catch((Error) => console.log(Error));
+	};
 
 	return (
-		<div className='App'>
+		<div className='intro_page'>
 			<div className='user_menu_cont'>
 				<div className='profile'>
 					<img src={user} />
@@ -43,7 +68,15 @@ function IntroPage1() {
 					</div>
 				)}
 				{!!select.name && cur !== 4 && (
-					<button className='watering_btn' onClick={() => setCur(4)}>
+					<button
+						className='watering_btn'
+						onClick={() => {
+							setCur(4);
+							onSubmitLoginHandler();
+							setTimeout(() => {
+								history.push({ pathname: '/intro/2', state: { select: select } });
+							}, 1000);
+						}}>
 						물주기
 					</button>
 				)}

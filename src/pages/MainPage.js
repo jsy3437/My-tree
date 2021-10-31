@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 
-import { login } from '../controller/action';
-import { register } from '../controller/action';
+import { useHistory } from 'react-router';
+
+import { login } from '../controller/user';
+import { register } from '../controller/user';
 
 import path1 from '../images/path1.svg';
 import path2 from '../images/path2.svg';
 import seed from '../images/seed.svg';
 
 function MainPage() {
-	const dispatch = useDispatch();
+	const history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
@@ -25,12 +26,10 @@ function MainPage() {
 				return setConfirmPassword(value);
 		}
 	};
-	console.log(email);
-	console.log(password);
-	console.log(confirmPassword);
+
 	let test = {
 		emailTest: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
-		passwordTest: /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/,
+		passwordTest: /^(?=\.*[a-zA-Z])(?=\.*[!@#$%^*+=-])(?=\.*[0-9])\.{8,25}$/,
 	};
 
 	const onSubmitRegisterHandler = () => {
@@ -50,12 +49,13 @@ function MainPage() {
 		register(userData)
 			.then((res) => {
 				console.log(res.data);
-				// if (res.data.success) {
-				// 	dispatch(user_login(res.data.email));
-				// 	alert('회원가입 완료');
-				// } else {
-				// 	alert('회원가입 실패');
-				// }
+				if (res.data.success) {
+					// 	dispatch(user_login(res.data.email));
+					alert('회원가입 완료');
+					history.push('/intro/1');
+				} else {
+					alert('회원가입 실패');
+				}
 			})
 			.catch((Error) => console.log(Error));
 	};
@@ -69,19 +69,22 @@ function MainPage() {
 		login(userData)
 			.then((res) => {
 				console.log(res.data);
-				// if (res.data.success) {
-				// 	dispatch(user_login(res.data.user));
-				// 	alert('로그인 완료');
-				// } else {
-				// 	alert('회원정보가 존재하지 않습니다.');
-				// }
+				if (res.data.success) {
+					// 	dispatch(user_login(res.data.user));
+					alert('로그인 완료');
+					history.push('/intro/1');
+				} else {
+					alert('회원정보가 존재하지 않습니다.');
+				}
 			})
 			.catch((Error) => console.log(Error));
 	};
 
 	return (
-		<div className='App'>
-			<div className='main_title'>당신의 기분으로 아름다운 나무를 키워봐요</div>
+		<div className='main_page'>
+			<div className='main_title'>
+				<p>당신의 기분으로</p> 아름다운 나무를 키워봐요
+			</div>
 
 			<div className='user'>
 				<div className='user_title'>나무 주인 되기</div>

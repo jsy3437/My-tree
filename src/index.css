@@ -59,13 +59,19 @@ a:visited {
 /* main Page */
 .App {
 	position: relative;
+	/* width: 720px; */
+	margin: 0px auto;
+}
+
+.app_cont {
 	width: 720px;
-	margin: 170px auto;
+	margin: 326px auto;
 }
 
 .main_title {
-	width: 424px;
-	margin: 26px auto;
+	width: 430px;
+	word-break: keep-all;
+	margin: 0px auto;
 	color: #707070;
 	font-size: 65px;
 }
@@ -223,7 +229,7 @@ input:focus {
 
 .main_title {
 	position: absolute;
-	top: -80px;
+	top: 140px;
 	left: 50%;
 	transform: translateX(-50%);
 }
@@ -232,8 +238,8 @@ input:focus {
 	position: absolute;
 	display: flex;
 	align-items: center;
-	top: -170px;
-	right: 50px;
+	top: 0px;
+	right: 240px;
 }
 
 .user_menu_cont > div {
@@ -249,9 +255,10 @@ input:focus {
 	height: 32px;
 	text-align: center;
 	font-size: 25px;
-	background: #ffffff;
+	background: #daf5f6;
+	/* border: 1px solid #fae100; */
 	border-radius: 10px;
-	margin: 20px 18px 0 auto;
+	/* margin: 20px 18px 0 auto; */
 	opacity: 0.8;
 }
 
@@ -264,7 +271,7 @@ input:focus {
 	font-size: 30px;
 	color: #707070;
 	margin: 7.5px;
-	margin-top: 100px;
+	margin-top: 30px;
 }
 
 .water > img {
@@ -280,5 +287,37 @@ input:focus {
 }
 .sel_watering {
 	position: absolute;
-	transform: translate(-50%, 30px);
+	transform: translate(-55%, -60px);
+	animation: fall 1s ease-in;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+	from {
+		transform: translate(-55%, -60px);
+	}
+	50% {
+		opacity: 0.8;
+	}
+	to {
+		transform: translate(-55%, 330px);
+		opacity: 0.1;
+	}
+}
+
+.past_cont {
+	position: relative;
+	bottom: -300px;
+	left: -450px;
+}
+
+.past > img {
+	width: 42px;
+	height: 72px;
+}
+
+.past > p {
+	font-size: 26px;
+	color: #707070;
+	opacity: 0.6;
 }
