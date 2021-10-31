@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="72" viewBox="0 0 42 72">
+  <g id="그룹_18" data-name="그룹 18" transform="translate(-1992 -1926)">
+    <g id="그룹_8" data-name="그룹 8" transform="translate(1580 1451)">
+      <circle id="타원_3" data-name="타원 3" cx="21" cy="21" r="21" transform="translate(412 505)" fill="#ffc8f6"/>
+      <path id="다각형_1" data-name="다각형 1" d="M20,0,40,45H0Z" transform="translate(413 475)" fill="#ffc8f6"/>
+    </g>
+    <ellipse id="타원_26" data-name="타원 26" cx="2.5" cy="2" rx="2.5" ry="2" transform="translate(2019 1976)" fill="#ff6fce"/>
+    <ellipse id="타원_31" data-name="타원 31" cx="2.5" cy="2" rx="2.5" ry="2" transform="translate(2002 1977)" fill="#ff6fce"/>
+    <circle id="타원_27" data-name="타원 27" cx="4" cy="4" r="4" transform="translate(2004 1971)" fill="#fff"/>
+    <circle id="타원_32" data-name="타원 32" cx="2" cy="2" r="2" transform="translate(2006 1973)" fill="#4d4d4d"/>
+    <ellipse id="타원_28" data-name="타원 28" cx="4" cy="3" rx="4" ry="3" transform="translate(2014 1972)" fill="#fff"/>
+    <circle id="타원_29" data-name="타원 29" cx="2" cy="2" r="2" transform="translate(2016 1973)" fill="#4d4d4d"/>
+    <path id="패스_17" data-name="패스 17" d="M2739.247,1728.048s3.811-2.189,6.408,0" transform="matrix(-0.921, 0.391, -0.391, -0.921, 5216.119, 2501.301)" fill="none" stroke="#4d4d4d" stroke-linecap="round" stroke-width="1"/>
+    <circle id="타원_33" data-name="타원 33" cx="1" cy="1" r="1" transform="translate(2008 1973)" fill="#fff"/>
+    <circle id="타원_30" data-name="타원 30" cx="1" cy="1" r="1" transform="translate(2018 1973)" fill="#fff"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="138" height="138" viewBox="0 0 138 138">
+  <defs>
+    <filter id="타원_7" x="0" y="0" width="138" height="138" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_22" data-name="그룹 22" transform="translate(-903 -370)">
+    <g transform="matrix(1, 0, 0, 1, 903, 370)" filter="url(#타원_7)">
+      <circle id="타원_7-2" data-name="타원 7" cx="60" cy="60" r="60" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="그룹_19" data-name="그룹 19" transform="translate(-1041 -1616)">
+      <g id="그룹_9" data-name="그룹 9" transform="translate(1580 1539)">
+        <circle id="타원_3" data-name="타원 3" cx="21" cy="21" r="21" transform="translate(412 505)" fill="#a1a8b5"/>
+        <path id="다각형_1" data-name="다각형 1" d="M20,0,40,45H0Z" transform="translate(413 475)" fill="#a1a8b5"/>
+      </g>
+      <ellipse id="타원_34" data-name="타원 34" cx="2" cy="1.5" rx="2" ry="1.5" transform="translate(2020 2065)" fill="#58768c"/>
+      <ellipse id="타원_35" data-name="타원 35" cx="2" cy="1.5" rx="2" ry="1.5" transform="translate(2002 2065)" fill="#58768c"/>
+      <circle id="타원_36" data-name="타원 36" cx="4" cy="4" r="4" transform="translate(2004 2059)" fill="#fff"/>
+      <circle id="타원_37" data-name="타원 37" cx="2" cy="2" r="2" transform="translate(2006 2061)" fill="#4d4d4d"/>
+      <circle id="타원_38" data-name="타원 38" cx="4" cy="4" r="4" transform="translate(2014 2059)" fill="#fff"/>
+      <circle id="타원_39" data-name="타원 39" cx="2" cy="2" r="2" transform="translate(2016 2061)" fill="#4d4d4d"/>
+      <path id="패스_18" data-name="패스 18" d="M2739.247,1727.123s4.123-.108,6.934,0" transform="matrix(1, 0.017, -0.017, 1, -699.154, 297.063)" fill="none" stroke="#4d4d4d" stroke-linecap="round" stroke-width="1"/>
+      <circle id="타원_40" data-name="타원 40" cx="1" cy="1" r="1" transform="translate(2008 2061)" fill="#fff"/>
+      <circle id="타원_41" data-name="타원 41" cx="1" cy="1" r="1" transform="translate(2018 2061)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
