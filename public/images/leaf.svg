@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103.714" height="161.083" viewBox="0 0 103.714 161.083">
+  <defs>
+    <filter id="패스_69" x="0" y="121.271" width="60.105" height="37.862" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+    </filter>
+    <filter id="타원_63" x="25.105" y="139.083" width="67" height="22" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="사각형_21" data-name="사각형 21" width="46.609" height="147.133" fill="#b3ff70"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_53" data-name="그룹 53" transform="translate(-902.895 -581.917)">
+    <g id="그룹_50" data-name="그룹 50">
+      <g transform="matrix(1, 0, 0, 1, 902.89, 581.92)" filter="url(#패스_69)">
+        <path id="패스_69-2" data-name="패스 69" d="M9282.144,3171.468s-17.235-33.73-36.457-10.756,15.108,4.272,35.813,10.756" transform="translate(-9231.04 -3025.43)" fill="#fff"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 902.89, 581.92)" filter="url(#타원_63)">
+        <ellipse id="타원_63-2" data-name="타원 63" cx="24.5" cy="2" rx="24.5" ry="2" transform="translate(34.11 145.08)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="그룹_49" data-name="그룹 49">
+      <g id="그룹_48" data-name="그룹 48" transform="translate(960 581.917)">
+        <g id="그룹_47" data-name="그룹 47" clip-path="url(#clip-path)">
+          <path id="패스_67" data-name="패스 67" d="M20.448,147.133C2.645,124.651-9.515,92.585,9.907,69.193l2.011-2.265,2.289-2.161A48.744,48.744,0,0,0,25.022,52.072C39.857,27.476,13.515-2.336,46.609.145,10.3-.275,55.745,34.26,20.168,65.848c-.735.7-2.395,2.292-3.137,3.007l-1.823,2.093c-18.644,22.178-7.619,53.638,5.24,76.184" transform="translate(0 0)" fill="#b3ff70"/>
+        </g>
+      </g>
+      <path id="패스_68" data-name="패스 68" d="M9310.032,3183.9s-28.651-56.071-60.6-17.88,25.115,7.1,59.534,17.88" transform="translate(-8318.221 -2564.894)" fill="#d2ffaa"/>
+    </g>
+  </g>
+</svg>

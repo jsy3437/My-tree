@@ -11,37 +11,43 @@ import seed from '../images/seed.svg';
 
 function MainPage() {
 	const history = useHistory();
-	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
-	const [confirmPassword, setConfirmPassword] = useState('');
+
+	const [loginData, setLoginData] = useState({ email: '', password: '' });
+	const [regData, setRegData] = useState({ email: '', password: '', confirmPassword: '' });
 
 	const onChangeHandler = (e) => {
 		const { name, value } = e.target;
 		switch (name) {
-			case 'email':
-				return setEmail(value);
-			case 'password':
-				return setPassword(value);
+			case 'logEmail':
+				return setLoginData({ ...loginData, email: value });
+			case 'logPassword':
+				return setLoginData({ ...loginData, password: value });
+			case 'regEmail':
+				return setRegData({ ...regData, email: value });
+			case 'regPassword':
+				return setRegData({ ...regData, password: value });
 			case 'confirmPassword':
-				return setConfirmPassword(value);
+				return setRegData({ ...regData, confirmPassword: value });
 		}
 	};
 
 	let test = {
 		emailTest: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i,
-		passwordTest: /^(?=\.*[a-zA-Z])(?=\.*[!@#$%^*+=-])(?=\.*[0-9])\.{8,25}$/,
+		passwordTest: /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{2,50}).{8,50}$/,
 	};
 
 	const onSubmitRegisterHandler = () => {
-		// if (test.passwordTest.exec(password) === null || password !== confirmPassword) {
-		// 	return alert('항목을 정확하게 기입해주세요. * 비밀번호는 영문, 숫자, 특수문자(!@#$%^&amp;*+=)를 조합한 8자 이상이어야 합니다.');
-		// } else if (test.emailTest.exec(email) === null) {
-		// 	return alert('항목을 정확하게 기입해주세요. * 이메일은 ex)example@exam.ple 형식이어야 합니다.');
-		// }
+		if (test.passwordTest.exec(regData.password) === null) {
+			return alert('항목을 정확하게 기입해주세요. * 비밀번호는 영문, 숫자, 특수문자(!@#$%^&amp;*+=)를 조합한 8자 이상이어야 합니다.');
+		} else if (test.emailTest.exec(regData.email) === null) {
+			return alert('항목을 정확하게 기입해주세요. * 이메일은 ex)example@exam.ple 형식이어야 합니다.');
+		} else if (regData.password !== regData.confirmPassword) {
+			return alert('항목을 정확하게 기입해주세요. * 비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+		}
 
 		const userData = {
-			email: email,
-			password: password,
+			email: regData.email,
+			password: regData.password,
 		};
 
 		console.log(userData);
@@ -52,7 +58,7 @@ function MainPage() {
 				if (res.data.success) {
 					// 	dispatch(user_login(res.data.email));
 					alert('회원가입 완료');
-					history.push('/intro/1');
+					history.push('/loading');
 				} else {
 					alert('회원가입 실패');
 				}
@@ -62,8 +68,8 @@ function MainPage() {
 
 	const onSubmitLoginHandler = () => {
 		const userData = {
-			email: email,
-			password: password,
+			email: loginData.email,
+			password: loginData.password,
 		};
 
 		login(userData)
@@ -72,7 +78,7 @@ function MainPage() {
 				if (res.data.success) {
 					// 	dispatch(user_login(res.data.user));
 					alert('로그인 완료');
-					history.push('/intro/1');
+					history.push('/loading');
 				} else {
 					alert('회원정보가 존재하지 않습니다.');
 				}
@@ -92,11 +98,11 @@ function MainPage() {
 					<div className='user_register_cont'>
 						<div className='input_box'>
 							<div className='input_title email'>이 메 일</div>
-							<input type='text' name='email' onChange={onChangeHandler} />
+							<input type='text' name='regEmail' onChange={onChangeHandler} />
 						</div>
 						<div className='input_box'>
 							<div className='input_title password'>비밀번호</div>
-							<input type='password' name='password' onChange={onChangeHandler} />
+							<input type='password' name='regPassword' onChange={onChangeHandler} />
 						</div>
 						<div className='input_box'>
 							<div className='input_title passwordConfirm'>비밀번호 확인</div>
@@ -113,11 +119,11 @@ function MainPage() {
 					<div className='user_login_cont'>
 						<div className='input_box'>
 							<div className='input_title email'>이 메 일</div>
-							<input type='text' name='email' onChange={onChangeHandler} />
+							<input type='text' name='logEmail' onChange={onChangeHandler} />
 						</div>
 						<div className='input_box'>
 							<div className='input_title password'>비밀번호</div>
-							<input type='password' name='password' onChange={onChangeHandler} />
+							<input type='password' name='logPassword' onChange={onChangeHandler} />
 						</div>
 						<div
 							className='btn login'
@@ -128,6 +134,8 @@ function MainPage() {
 						</div>
 					</div>
 				</div>
+
+				{/* 간편 로그인 */}
 				<div className='easy_login_cont'>
 					{/* <div className='easy_log naver'>
 						<span>NAVER</span>로 로그인

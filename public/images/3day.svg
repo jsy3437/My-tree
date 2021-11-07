@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="138" height="138" viewBox="0 0 138 138">
+  <defs>
+    <filter id="타원_5" x="0" y="0" width="138" height="138" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="사각형_15" data-name="사각형 15" width="31.496" height="31.308" fill="#a0f599"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_15-2" data-name="사각형 15" width="32.188" height="31.995" fill="#a0f599"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="사각형_15-3" data-name="사각형 15" width="30.599" height="30.415" fill="#a0f599"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_37" data-name="그룹 37" transform="translate(-701 -373)">
+    <g transform="matrix(1, 0, 0, 1, 701, 373)" filter="url(#타원_5)">
+      <circle id="타원_5-2" data-name="타원 5" cx="60" cy="60" r="60" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="그룹_30" data-name="그룹 30" transform="translate(772.401 437.686) rotate(80)">
+      <g id="그룹_28" data-name="그룹 28" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="패스_24" data-name="패스 24" d="M24.726,25.005a5.99,5.99,0,0,0,3.612-.015A15.724,15.724,0,0,0,18.189,0H0V15.558A15.733,15.733,0,0,0,24.823,28.415a5.762,5.762,0,0,0-.1-3.41" transform="translate(0 0)" fill="#a0f599"/>
+      </g>
+    </g>
+    <g id="그룹_31" data-name="그룹 31" transform="matrix(-0.966, -0.259, 0.259, -0.966, 772.66, 437.686)">
+      <g id="그룹_28-2" data-name="그룹 28" transform="translate(0 0)" clip-path="url(#clip-path-2)">
+        <path id="패스_24-2" data-name="패스 24" d="M25.269,25.554a6.122,6.122,0,0,0,3.691-.015A16.069,16.069,0,0,0,18.588,0H0V15.9A16.079,16.079,0,0,0,25.368,29.039a5.888,5.888,0,0,0-.1-3.485" transform="translate(0 0)" fill="#a0f599"/>
+      </g>
+    </g>
+    <g id="그룹_32" data-name="그룹 32" transform="matrix(0.839, -0.545, 0.545, 0.839, 772.137, 437.661)">
+      <g id="그룹_28-3" data-name="그룹 28" transform="translate(0 0)" clip-path="url(#clip-path-3)">
+        <path id="패스_24-3" data-name="패스 24" d="M24.022,24.292a5.819,5.819,0,0,0,3.509-.015A15.276,15.276,0,0,0,17.671,0H0V15.115a15.285,15.285,0,0,0,24.116,12.49,5.6,5.6,0,0,0-.094-3.313" transform="translate(0 0)" fill="#a0f599"/>
+      </g>
+    </g>
+  </g>
+</svg>

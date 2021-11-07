@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 const instance = axios.create({
-	baseURL: 'http://59.14.139.36:8001/tree',
+	proxy: 'http://59.14.139.36:8001',
+	baseURL:'/tree',
+	withCredentials: true,
 });
 
 const errorMessage = () => {

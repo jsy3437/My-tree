@@ -56,10 +56,13 @@ a:visited {
 	color: inherit;
 }
 
+.none {
+	display: none;
+}
+
 /* main Page */
 .App {
 	position: relative;
-	/* width: 720px; */
 	margin: 0px auto;
 }
 
@@ -69,7 +72,11 @@ a:visited {
 }
 
 .main_title {
-	width: 430px;
+	position: absolute;
+	top: 140px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 640px;
 	word-break: keep-all;
 	margin: 0px auto;
 	color: #707070;
@@ -222,16 +229,34 @@ input:focus {
 	left: 332px;
 }
 
-/* intro 1 */
-.blank {
-	height: 360px;
+.sproutImg {
+	position: absolute;
+	top: -110px;
+	left: -15px;
+	z-index: -2;
 }
 
-.main_title {
+.leafImg {
 	position: absolute;
-	top: 140px;
-	left: 50%;
-	transform: translateX(-50%);
+	top: -275px;
+	left: -30px;
+}
+
+/* loading page */
+.loading {
+	width: 90px;
+	margin: auto;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	top: -110px;
+	font-size: 65px;
+	color: #707070;
+}
+
+/* intro  */
+.blank {
+	height: 360px;
 }
 
 .user_menu_cont {
@@ -242,10 +267,64 @@ input:focus {
 	right: 240px;
 }
 
+.tree_day {
+	font-size: 115px;
+	color: #707070;
+	padding-top: 40px;
+}
+
 .user_menu_cont > div {
 	margin: 22px 11px;
 }
 
+/* plant list Page */
+.eyeImg {
+	position: relative;
+	top: -50px;
+}
+
+.profile,
+.trace {
+	position: relative;
+	z-index: 1;
+}
+
+.logout {
+	background-image: url(./images/logout.svg);
+	width: 70px;
+	height: 59px;
+	position: absolute;
+	top: 37px;
+	left: -45px;
+	line-height: 65px;
+	color: #707070;
+}
+
+.trace_menu {
+	background-image: url(./images/logout3.svg);
+	width: 62px;
+	height: 39px;
+	position: absolute;
+	top: 33px;
+	right: -70px;
+	line-height: 23px;
+	color: #707070;
+	padding: 22px 20px;
+	font-size: 18px;
+}
+
+.trace_plant {
+	width: 42px;
+	min-height: 150px;
+	position: absolute;
+	top: 125px;
+	right: -70px;
+	line-height: 23px;
+	color: #707070;
+	background-color: #ffffff;
+	border-radius: 15px;
+	padding: 20px 30px;
+}
 /*  */
 .watering_btn {
 	transform: translateY(30px);
@@ -306,9 +385,20 @@ input:focus {
 }
 
 .past_cont {
-	position: relative;
-	bottom: -300px;
-	left: -450px;
+	width: 400px;
+	min-height: 100px;
+	display: flex;
+	justify-content: flex-start;
+	position: absolute;
+	bottom: -350px;
+	left: -180px;
+	opacity: 0.6;
+	margin: 0;
+}
+
+.past {
+	width: 50px;
+	margin: 10px;
 }
 
 .past > img {
@@ -320,4 +410,22 @@ input:focus {
 	font-size: 26px;
 	color: #707070;
 	opacity: 0.6;
+}
+
+.period_cont > .main_title {
+	width: 487px;
+}
+
+.period_box {
+	display: flex;
+	justify-content: center;
+}
+
+.period {
+	margin: 0 30px;
+}
+
+/* plant List Page */
+.plantList_Page > .main_title {
+	width: 640px;
 }
